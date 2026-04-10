@@ -12,6 +12,9 @@ Nexus Movies is a premium, high-performance movie discovery platform designed fo
 - **Dynamic Sorting**: Effortlessly reorder the grid by **Latest Releases** or **IMDb Rating** (8.4+).
 - **Interactive Details**: Deep-dive into any title with a rich glassmorphism modal showing plot summaries, metadata, and directors.
 - **Favorites System**: Save your most-anticipated titles with a single click.
+- **User Login**: Secure authentication to personalize your experience across sessions.
+- **Watchlist Sync**: Keep your watchlist in sync across devices in real time.
+- **Trailer Previews**: Watch trailers inline without leaving the app.
 
 ## 🛠️ Technology Stack
 
@@ -36,19 +39,36 @@ To run Nexus Movies locally:
    npm install
    ```
 
-3. **Run the development server**:
+3. **Set up environment variables**:
+   Create a `.env` file in the root of the project and add your required keys:
+   ```env
+   VITE_API_KEY=your_api_key_here
+   ```
+
+4. **Run the development server**:
    ```bash
    npm run dev
    ```
 
-4. **Open your browser**:
+5. **Open your browser**:
    Navigate to `http://localhost:5173/`
 
 ## 📂 Project Structure
 
-- `src/App.jsx`: Main application logic, state management, and movie dataset.
-- `src/index.css`: Custom cinematic design system and theme variables.
-- `src/main.jsx`: Entry point for the React application.
+```
+NEXUS/
+├── src/
+│   ├── components/
+│   │   ├── MovieCard.jsx       # Individual movie card component
+│   │   ├── Navbar.jsx          # Top navigation bar
+│   │   └── TrailerModal.jsx    # Inline trailer preview modal
+│   ├── hooks/
+│   │   └── useAuth.js          # Custom hook for user authentication
+│   ├── App.jsx                 # Main application logic, state management, and movie dataset
+│   ├── index.css               # Custom cinematic design system and theme variables
+│   └── main.jsx                # Entry point for the React application
+```
 
 ---
+
 Built with ❤️ by Shivam Yadav
